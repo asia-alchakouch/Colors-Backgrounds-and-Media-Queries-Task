@@ -1,13 +1,13 @@
 /* Importing font */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 /* setting the font family for the website */
 *{
-    font-family: "Merriweather", serif;
+    font-family: "Roboto", serif;
 }
 
-/*************  body format **************/
+/*************  General format **************/
 
 
 /* applying the following:
@@ -19,22 +19,56 @@
     padding: 0;
     line-height: 1.6;
     box-sizing: border-box;
+    background-color: #F6F4F0;
 }
 
 /* applying font size and text alignment for headings and paragraphs*/
 h1{
+    color: #F6F4F0;
     font-size: 2rem;
     text-align: center;
 }
 
 h2{
+    color: #2E5077;
     font-size: 1.5rem;
     text-align: left;
 }
 
-p{
-    font-size: 1rem;
+h3{
+    color: #2E5077;
+    font-size: 1.3rem;
     text-align: left;
+}
+
+p {
+    color: #446284;
+    font-size: 1rem;
+    text-align: center;
+}
+
+address , time{
+    color: rgb(181, 180, 180);
+    font-size: 1rem;
+    text-align: center;
+
+}
+
+a{
+    text-decoration: none;
+    color: #79D7BE;
+}
+
+li {
+    list-style: none;
+}
+
+li a{
+    color: #79D7BE;
+}
+
+hr{
+    margin: 1rem;
 }
 
 /*****************************************/
@@ -42,10 +76,13 @@ p{
 /*************  header format **************/
 
 header{
-    background: #333;
-    color: #fff;
-    padding: 30px 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    margin: 3rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(to bottom right, #4DA1A9, #79D7BE);
+    box-shadow: 5px 5px 15px 1px #b9b9b9;
 }
 
 /* appling flexbox to navigation */
@@ -55,62 +92,73 @@ nav{
 }
 
 nav > a{
-    color: white;
+    color: #F6F4F0;
     text-decoration: none;
     text-size-adjust: 2rem;
     padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+nav > a:hover{
+    color: #2E5077;
 }
 
 /*****************************************/
 
 /************* blog section format **************/
 
+/*** format in homepage ***/
+.posts {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
 /* h1 and h2 : changing color, font size, margin, and text alignment */
 section .title {
     margin: 2rem;
     text-align: center;
     font-size: 1.5rem;
-    color: gray;
+    color: #2E5077;
 }
 
 /* adding flexbox to blog list*/
 .blog-list{
     display: flex;
-    align-items: center;
     padding: 1rem;
-    padding-left: 6rem;
-    background:#f1f1f1;
-    border: 1px solid lightgray;
-
+    margin: 3rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 15px 1px #b9b9b9;
 }
 
-/* making blog list responsive for small screen size */
 
-@media(max-width: 800px){
-    .blog-list{
-        padding: 1rem; 
-    }
+.blog-posts{
+    display: flex;
+    margin: 2rem;
 }
 
 /* adding borders, padding, and margin for separation */
 article {
-    background: white;
-    padding: 10px 20px;
-    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 3rem;
+    margin: 1rem;
     border-radius: 1rem;
-    border-style: solid;
-    border: 1px solid lightgray;
+    background-color: #F6F4F0;
+    box-shadow: 5px 5px 15px 1px #b9b9b9;
 }
 img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1.5rem auto 1.5rem auto;
     width: 70%;
 }
 
 /**********************************************/
 
 /*************  contact format **************/
+
+/* contact form */
 
 .contact-section{
     margin: 2rem;
@@ -126,34 +174,8 @@ img {
     width: 70%;
 }
 
-/********************************************/
 
-/************* footer format **************/
-
-footer{
-    background: #333;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* --- form section -- */
-
-.footer-contact-form{
-    background: white;
-    color: black;
-    padding: 30px 0px;
-    margin: 2rem;
-    border-radius: 1rem;
-    width: 50%;
-}
-
-.footer-contact-form > form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/* table format */
 
 input, textarea{
     margin: 5px;
@@ -163,15 +185,11 @@ input, textarea{
 
 input[type=submit]{
     color:  white;
-    background: #333;
+    background: #4DA1A9;
+    border-style: none;
     padding: 0.5rem;
 }
 
-/* --- table section -- */
-
-.footer-contact-information{
-    width: 100%;
-}
 
 table{
     width: 100%;
@@ -185,5 +203,82 @@ td , th{
     padding: 0.4rem;
 }
 
+/********************************************/
+
+/************* footer format **************/
+
+footer{
+    text-align: center;
+    padding: 1rem 4rem;
+    margin: 3rem;
+    border-radius: 2rem;
+    background-image: linear-gradient(to bottom right, #4DA1A9, #79D7BE);
+    box-shadow: 5px 5px 15px 1px #b9b9b9;
+}
+
+footer p{
+    color: #fff;
+}
+footer a{
+    color: #2E5077;
+}
+
 
 /**********************************************/
+
+
+/* making blog list responsive for small screen size 
+    addjesting font sizes and margin/padding */
+
+@media (max-width: 768px) {
+
+    /* header */
+    header{
+        flex-direction: column;
+        margin: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.6rem;
+        padding: 0.5rem;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    section .title {
+        margin: 1.2rem;
+        font-size: 1rem;
+    }
+
+    h3{
+        font-size: 1.2rem;
+    }
+
+    p , address , time, li{
+        font-size: 0.9rem;
+    }
+
+    /* blog list header */
+
+    .blog-list{
+        flex-direction: column;
+        justify-content: center;
+        margin: 1rem;
+    }
+
+    .blog-list ul{
+        text-align: center;
+        padding: 0;
+    }
+
+    /* blog posts */
+
+    .blog-posts{
+        flex-direction: column;
+        margin: 0.5rem;
+    }
+
+
+}
